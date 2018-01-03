@@ -6,8 +6,12 @@
   "author": "Nicole Ivanov <nivanov1030@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "nodemon": "^1.14.3"
+    "knex": "^0.14.2",
+    "morgan": "^1.9.0",
+    "nodemon": "^1.14.3",
+    "pg": "^7.4.0"
   },
   "scripts": {
     "start": "nodemon src"
