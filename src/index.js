@@ -20,7 +20,10 @@ app.get('/accounts/:id', (req, res, next) => {
     .from('accounts')
     .where({ id: req.params.id })
     .first()
-    .then(accountName => res.send(accountName));
+    .then(account => {
+      const { name } = account;
+      res.send(account.name);
+    });
 });
 
 app.listen(7000, () => console.log('SAccountAPI listening on port 7000'));

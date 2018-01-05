@@ -21,13 +21,13 @@ services:
       context: .
     ports:
       - "7000:7000"
-    # volumes:
-    #   - ./.babelrc:/usr/app/.babelrc
-    #   - ./src:/usr/app/src
-    #   - ./package.json:/usr/app/package.json
-    #   - ./knexfile.js:/usr/app/knexfile.js
-    #   - ./node_modules:/usr/app/node_modules
-    #   - ./yarn.lock:/usr/app/yarn.lock
-    #   - ./scripts:/usr/app/scripts
-    #   - ./buildInfo.json:/usr/app/buildInfo.json
+    volumes:
+      # - ./.babelrc:/usr/app/.babelrc
+      - ./src:/usr/app/src
+      # - ./package.json:/usr/app/package.json
+      # - ./knexfile.js:/usr/app/knexfile.js
+      # - ./node_modules:/usr/app/node_modules
+      # - ./yarn.lock:/usr/app/yarn.lock
+      # - ./scripts:/usr/app/scripts
+      # - ./buildInfo.json:/usr/app/buildInfo.json
     command: yarn start
